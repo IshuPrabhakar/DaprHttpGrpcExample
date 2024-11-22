@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "KloMCcYIAko2rB/FHACoe8lMfzc3ydO0/6YtFAIpZIo=",
+  "Source": "DaprClient",
+  "BasePath": "_content/DaprClient",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "D:\\IshuPrabhakar\\DaprTesting\\DaprServer\\DaprServer.csproj",
+      "Version": 2,
+      "Source": "DaprServer",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

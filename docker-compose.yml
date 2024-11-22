@@ -1,0 +1,25 @@
+services:
+  daprclient:
+    image: ${DOCKER_REGISTRY-}daprclient
+    build:
+      context: .
+      dockerfile: DaprClient/Dockerfile
+
+  daprclient-dapr:
+    image: "daprio/daprd:1.10.4"
+    network_mode: "service:daprclient"
+    depends_on:
+      - daprclient
+
+  daprserver:
+    image: ${DOCKER_REGISTRY-}daprserver
+    build:
+      context: .
+      dockerfile: DaprServer/Dockerfile
+
+  daprserver-dapr:
+    image: "daprio/daprd:1.10.4"
+    network_mode: "service:daprserver"
+    depends_on:
+      - daprserver
+
