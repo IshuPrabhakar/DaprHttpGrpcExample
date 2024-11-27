@@ -56,3 +56,5 @@ D:\IshuPrabhakar\DaprTesting\DaprClient\bin\Debug\net8.0\Grpc.AspNetCore.Server.
 D:\IshuPrabhakar\DaprTesting\DaprClient\bin\Debug\net8.0\Grpc.Net.ClientFactory.dll
 D:\IshuPrabhakar\DaprTesting\DaprClient\bin\Debug\net8.0\DaprServer.dll
 D:\IshuPrabhakar\DaprTesting\DaprClient\bin\Debug\net8.0\DaprServer.pdb
+D:\IshuPrabhakar\DaprTesting\DaprClient\obj\Debug\net8.0\DaprClient.sourcelink.json
+D:\IshuPrabhakar\DaprTesting\DaprClient\bin\Debug\net8.0\Dapr.Extensions.Configuration.dll

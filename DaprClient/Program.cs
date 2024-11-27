@@ -1,8 +1,13 @@
+using Dapr.Client;
+using Dapr.Extensions.Configuration;
 using DaprClient.Services;
 using Grpc.Core;
 using GrpcGreeter;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
+
+var daprHttpUrl = "http://localhost:5005";
+var daprGrpcUrl = "http://localhost:5005";
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,27 +22,24 @@ builder.Host.UseSerilog((context, config) =>
     //config.ReadFrom.Configuration(context.Configuration);
 });
 
-// Configure gRPC client for Dapr
-// builder.Services.AddSingleton(sp =>
-// {
-//     return new Dapr.Client.DaprClientBuilder()
-//         .UseGrpcEndpoint($"http://localhost:50001")
-//         .Build();
-// });
+builder.Services.AddDaprClient();
 
 // Example: Add a typed gRPC client
 builder.Services.AddGrpcClient<Greeter.GreeterClient>((provider, client) =>
 {
-    // var daprClient = provider.GetRequiredService<Dapr.Client.DaprClient>();
-
-    // Replace "chargingstation" with the actual Dapr app ID of your service
-    // var serviceName = "daprserver";
-
     // Use Dapr's service invocation address
-    client.Address = new Uri($"http://localhost:5005");
+    client.Address = new Uri(daprGrpcUrl);
 });
 
-builder.Services.AddDaprClient();
+
+builder.Configuration.AddDaprSecretStore(
+    "evz-secretstore-dev",
+   new DaprClientBuilder()
+    .UseHttpEndpoint(daprHttpUrl)
+    .UseGrpcEndpoint(daprGrpcUrl)
+    .Build(),
+    TimeSpan.FromSeconds(30)
+);
 
 builder.Services.AddTransient<IDaprService, DaprService>();
 // Add Cors
@@ -61,6 +63,7 @@ var summaries = new[]
 
 app.MapGet("/weatherforecast", () =>
 {
+    Log.Information($"{builder.Configuration.GetSection("ConnectionStrings:DefaultConnection").Value}");
     var forecast = Enumerable.Range(1, 5).Select(index =>
         new WeatherForecast
         (

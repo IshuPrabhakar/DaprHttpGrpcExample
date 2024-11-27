@@ -23,15 +23,9 @@ public class DaprService(
             { "dapr-app-id", "daprserver" }
         };
 
-        var res = await _grpcService.SayHelloAsync(new HelloRequest() { Name = "Ishu" }, metadata);
         // Call the gRPC service via Dapr Service Invocation
-        // var request = new HelloRequest() { Name = "Ishu" };
+        var res = await _grpcService.SayHelloAsync(new HelloRequest() { Name = "Ishu" }, metadata);
 
-        // var res = await _daprClient.InvokeMethodGrpcAsync<HelloRequest, HelloReply>(
-        //     "daprserver",          // Application ID of the gRPC server
-        //     "SayHello",            // Method name
-        //     request                // Request payload
-        // );
         Log.Information($"Invoked dapr Grpc request..");
 
         return res.Message;

@@ -30,3 +30,6 @@ D:\IshuPrabhakar\DaprTesting\obj\Debug\docker-c.35A3FFBA.Up2Date
 D:\IshuPrabhakar\DaprTesting\bin\Debug\Grpc.AspNetCore.Server.dll
 D:\IshuPrabhakar\DaprTesting\bin\Debug\Dapr.AspNetCore.dll
 D:\IshuPrabhakar\DaprTesting\bin\Debug\Grpc.Net.ClientFactory.dll
+D:\IshuPrabhakar\DaprTesting\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\IshuPrabhakar\DaprTesting\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\IshuPrabhakar\DaprTesting\bin\Debug\Dapr.Extensions.Configuration.dll

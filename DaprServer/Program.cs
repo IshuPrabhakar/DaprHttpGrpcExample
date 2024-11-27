@@ -1,3 +1,5 @@
+using Dapr.Client;
+using Dapr.Extensions.Configuration;
 using DaprServer.Services;
 using Serilog;
 
@@ -15,6 +17,11 @@ builder.WebHost.ConfigureKestrel(options =>
         listenOptions.Protocols = Microsoft.AspNetCore.Server.Kestrel.Core.HttpProtocols.Http2;
     });
 });
+
+//builder.Configuration.AddDaprSecretStore("evz-secretstore-dev",
+//    new DaprClientBuilder().Build(),
+//    TimeSpan.FromSeconds(30)
+//);
 
 builder.Services.AddGrpc();
 

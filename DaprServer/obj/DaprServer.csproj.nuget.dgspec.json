@@ -53,6 +53,10 @@
               "target": "Package",
               "version": "[1.14.0, )"
             },
+            "Dapr.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[1.14.0, )"
+            },
             "Grpc.AspNetCore": {
               "target": "Package",
               "version": "[2.67.0, )"

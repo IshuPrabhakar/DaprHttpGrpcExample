@@ -39,6 +39,23 @@
           }
         }
       },
+      "Dapr.Extensions.Configuration/1.14.0": {
+        "type": "package",
+        "dependencies": {
+          "Dapr.Client": "1.14.0",
+          "Microsoft.Extensions.Configuration": "3.1.2"
+        },
+        "compile": {
+          "lib/net8.0/Dapr.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Dapr.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Google.Api.CommonProtos/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -219,6 +236,22 @@
         "buildMultiTargeting": {
           "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props": {},
           "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/3.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
@@ -760,6 +793,22 @@
         "lib/net8.0/Dapr.Client.xml"
       ]
     },
+    "Dapr.Extensions.Configuration/1.14.0": {
+      "sha512": "WiEWmMv6VvOrHU8uFTSpjYNTJHcPACi/IIEcsKgxNITksqHhMPGSo2xFd7ebXYaRYVB2O2wawMsoCFYBCgEcHg==",
+      "type": "package",
+      "path": "dapr.extensions.configuration/1.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dapr.extensions.configuration.1.14.0.nupkg.sha512",
+        "dapr.extensions.configuration.nuspec",
+        "images/logo-transparent.png",
+        "lib/net6.0/Dapr.Extensions.Configuration.dll",
+        "lib/net6.0/Dapr.Extensions.Configuration.xml",
+        "lib/net8.0/Dapr.Extensions.Configuration.dll",
+        "lib/net8.0/Dapr.Extensions.Configuration.xml"
+      ]
+    },
     "Google.Api.CommonProtos/2.2.0": {
       "sha512": "mxXNYkHYL7T6NG8cdbodxpixQZfpozBkZj2g+jGCB/sO13RqfUvh9YHd8G2QI5HP24brl+nILJReC3/gzgsrrg==",
       "type": "package",
@@ -1269,6 +1318,22 @@
         "tools/netcoreapp2.1/GetDocument.Insider.dll",
         "tools/netcoreapp2.1/GetDocument.Insider.runtimeconfig.json",
         "tools/netcoreapp2.1/System.Diagnostics.DiagnosticSource.dll"
+      ]
+    },
+    "Microsoft.Extensions.Configuration/3.1.2": {
+      "sha512": "BxwRSBab309SYMCDCFyB6eSc7FnX5m9kOJQHw2IQIyb5PEtpfslhscTw63Gwhl3dPnaM1VGFXIyI0BVgpiLgOw==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration/3.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.xml",
+        "microsoft.extensions.configuration.3.1.2.nupkg.sha512",
+        "microsoft.extensions.configuration.nuspec"
       ]
     },
     "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
@@ -2179,6 +2244,7 @@
     "net8.0": [
       "Dapr.AspNetCore >= 1.14.0",
       "Dapr.Client >= 1.14.0",
+      "Dapr.Extensions.Configuration >= 1.14.0",
       "Grpc.AspNetCore >= 2.67.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.11",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.0",
@@ -2235,6 +2301,10 @@
             "version": "[1.14.0, )"
           },
           "Dapr.Client": {
+            "target": "Package",
+            "version": "[1.14.0, )"
+          },
+          "Dapr.Extensions.Configuration": {
             "target": "Package",
             "version": "[1.14.0, )"
           },
